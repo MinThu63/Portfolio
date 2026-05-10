@@ -1,6 +1,7 @@
 import { academicAwards } from "@/lib/data";
 import { Trophy } from "lucide-react";
 import Image from "next/image";
+import { assetPath } from "@/lib/basePath";
 
 export default function AwardsSection() {
   return (
@@ -17,7 +18,7 @@ export default function AwardsSection() {
           >
             {award.image && (
               <a
-                href={award.image}
+                href={assetPath(award.image)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative block h-32 w-full shrink-0 overflow-hidden rounded-lg bg-foreground/5 cursor-zoom-in sm:w-48"

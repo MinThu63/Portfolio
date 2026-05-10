@@ -2,6 +2,7 @@ import { certifications, academicAwards } from "@/lib/data";
 import { ArrowLeft, CheckCircle, Trophy } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/basePath";
 
 export const metadata = {
   title: "Certifications & Awards — Kyaw Min Thu",
@@ -35,7 +36,7 @@ export default function CertificationsPage() {
           >
             {cert.image && (
               <a
-                href={cert.image}
+                href={assetPath(cert.image)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative block h-48 w-full bg-foreground/5 cursor-zoom-in"

@@ -2,6 +2,7 @@ import { certifications } from "@/lib/data";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/basePath";
 
 export default function CertificationsSection() {
   const featured = certifications.filter((c) => c.featured);
@@ -20,7 +21,7 @@ export default function CertificationsSection() {
             >
               {cert.image && (
                 <a
-                  href={cert.image}
+                  href={assetPath(cert.image)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative block h-40 w-full bg-foreground/5 cursor-zoom-in"

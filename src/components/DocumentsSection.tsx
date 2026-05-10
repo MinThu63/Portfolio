@@ -1,4 +1,5 @@
 import { FileDown } from "lucide-react";
+import { assetPath } from "@/lib/basePath";
 
 export default function DocumentsSection() {
   return (
@@ -9,7 +10,7 @@ export default function DocumentsSection() {
       </p>
       <div className="mt-6">
         <a
-          href="/resume.pdf"
+          href={assetPath("/resume.pdf")}
           download
           className="inline-flex items-center gap-3 rounded-xl border border-foreground/10 p-5 transition-colors hover:bg-foreground/5"
         >
