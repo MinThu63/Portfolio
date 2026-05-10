@@ -42,7 +42,7 @@ export default function CertificationsPage() {
                 className="relative block h-48 w-full bg-foreground/5 cursor-zoom-in"
               >
                 <Image
-                  src={cert.image}
+                  src={assetPath(cert.image)}
                   alt={cert.title}
                   fill
                   className="object-cover transition-transform hover:scale-105"

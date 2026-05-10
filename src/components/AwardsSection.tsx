@@ -24,7 +24,7 @@ export default function AwardsSection() {
                 className="relative block h-32 w-full shrink-0 overflow-hidden rounded-lg bg-foreground/5 cursor-zoom-in sm:w-48"
               >
                 <Image
-                  src={award.image}
+                  src={assetPath(award.image)}
                   alt={award.title}
                   fill
                   className="object-cover transition-transform hover:scale-105"
