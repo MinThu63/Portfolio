@@ -22,6 +22,7 @@ function getGradeColor(grade: string) {
   if (grade === "DIST") return "text-yellow-600 bg-yellow-500/10";
   if (grade === "A") return "text-green-600 bg-green-500/10";
   if (grade === "B+" || grade === "B") return "text-blue-600 bg-blue-500/10";
+  if (grade === "In Progress") return "text-orange-600 bg-orange-500/10";
   if (grade === "Pass") return "text-foreground/40 bg-foreground/5";
   return "text-foreground/60 bg-foreground/5";
 }

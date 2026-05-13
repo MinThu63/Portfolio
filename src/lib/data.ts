@@ -613,6 +613,12 @@ export const academicRecords: ModuleRecord[] = [
   { academicYear: "2025", semester: 2, code: "C372", name: "Payment Technologies", credits: 4, grade: "B" },
   { academicYear: "2025", semester: 2, code: "C373", name: "Distributed Ledger Technology Solutioning", credits: 4, grade: "B+" },
   { academicYear: "2025", semester: 2, code: "G962", name: "ECG II: Becoming Future-Ready", credits: 1, grade: "Pass" },
+  // Current semester — In Progress
+  { academicYear: "2026", semester: 1, code: "C4XX", name: "IT Project Management", credits: 4, grade: "In Progress" },
+  { academicYear: "2026", semester: 1, code: "C4XX", name: "AI Essentials & Innovations", credits: 4, grade: "In Progress" },
+  { academicYear: "2026", semester: 1, code: "C4XX", name: "Discovering Robotics", credits: 2, grade: "In Progress" },
+  { academicYear: "2026", semester: 1, code: "C4XX", name: "Unmanned Aircraft Operation", credits: 2, grade: "In Progress" },
+  { academicYear: "2026", semester: 1, code: "C4XX", name: "Final Year Project (GLDB)", credits: 4, grade: "In Progress" },
 ];
 
 export const cGPA = 3.43;
