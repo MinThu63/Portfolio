@@ -656,9 +656,21 @@ export const competitions: Competition[] = [
       "Evaluated on Problem, Solution, Output, Governance, and Adoption",
     ],
   },
+  {
+    title: "Whitehacks 2026 — Capture The Flag (CTF)",
+    organiser: "SMU Whitehat Society",
+    status: "In Progress",
+    timeline: "2026 (Sign-up by 15 June 2026)",
+    description:
+      "A beginner-friendly CTF competition by Singapore Management University designed for tertiary students to explore cybersecurity. Challenges include Cryptography, Reverse Engineering, Web exploitation, and Forensics — with in-house training workshops provided ahead of the competition.",
+    highlights: [
+      "Hands-on cybersecurity challenges across multiple domains",
+      "Training workshops to build confidence with no prior experience required",
+      "Networking with CSIT and DSO for scholarships and internships",
+      "Attractive prizes for top performers",
+    ],
+  },
 ];
-
-// Work Experience
 export interface WorkExperience {
   title: string;
   company: string;
