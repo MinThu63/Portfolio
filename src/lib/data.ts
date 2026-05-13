@@ -327,7 +327,7 @@ export const certifications: Certification[] = [
     date: "2023",
     image: ["/certs/Matri-Exam1.jpg", "/certs/Matri-Exam2.jpg"],
     skillsAcquired: [
-      "Successfully passed national matriculation examinations",
+      "Passed with 5 Distinctions out of 6 subjects",
     ],
   },
 ];
