@@ -212,7 +212,7 @@ export interface Certification {
   date: string;
   featured?: boolean;
   skillsAcquired: string[];
-  image?: string;
+  image?: string | string[];
 }
 
 // Academic Awards
@@ -319,6 +319,15 @@ export const certifications: Certification[] = [
     skillsAcquired: [
       "Computing workshops and hands-on coding sessions",
       "Student-led conference participation",
+    ],
+  },
+  {
+    title: "Matriculation Examinations",
+    issuer: "Ministry of Education",
+    date: "2023",
+    image: ["/certs/Matri-Exam1.jpg", "/certs/Matri-Exam2.jpg"],
+    skillsAcquired: [
+      "Successfully passed national matriculation examinations",
     ],
   },
 ];

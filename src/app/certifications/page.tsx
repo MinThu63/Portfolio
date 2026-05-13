@@ -35,6 +35,26 @@ export default function CertificationsPage() {
             className="flex flex-col overflow-hidden rounded-xl border border-foreground/10 transition-colors hover:bg-foreground/5"
           >
             {cert.image && (
+              Array.isArray(cert.image) ? (
+                <div className="grid grid-cols-2 gap-1">
+                  {cert.image.map((img, i) => (
+                    <a
+                      key={i}
+                      href={assetPath(img)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative block h-48 w-full bg-foreground/5 cursor-zoom-in"
+                    >
+                      <Image
+                        src={assetPath(img)}
+                        alt={`${cert.title} ${i + 1}`}
+                        fill
+                        className="object-cover transition-transform hover:scale-105"
+                      />
+                    </a>
+                  ))}
+                </div>
+              ) : (
               <a
                 href={assetPath(cert.image)}
                 target="_blank"
@@ -48,6 +68,7 @@ export default function CertificationsPage() {
                   className="object-cover transition-transform hover:scale-105"
                 />
               </a>
+              )
             )}
             <div className="flex flex-1 flex-col gap-2 p-5">
               <h3 className="font-semibold leading-tight">{cert.title}</h3>
