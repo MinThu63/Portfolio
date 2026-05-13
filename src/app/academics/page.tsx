@@ -80,6 +80,38 @@ export default function AcademicsPage() {
         Cumulative GPA: {cGPA.toFixed(2)} / 4.00
       </div>
 
+      {/* GPA Trend Chart */}
+      <div className="mt-8 rounded-xl border border-foreground/10 p-6">
+        <h2 className="text-lg font-semibold">GPA Trend</h2>
+        <div className="mt-6 flex items-end justify-between gap-2 h-48">
+          {[
+            { sem: "Y1S1", gpa: 2.89 },
+            { sem: "Y1S2", gpa: 3.47 },
+            { sem: "Y2S1", gpa: 3.96 },
+            { sem: "Y2S2", gpa: 3.41 },
+          ].map((item) => {
+            const height = ((item.gpa - 2.0) / 2.0) * 100;
+            return (
+              <div key={item.sem} className="flex flex-1 flex-col items-center gap-2">
+                <span className="text-xs font-semibold text-foreground/70">
+                  {item.gpa.toFixed(2)}
+                </span>
+                <div
+                  className="w-full max-w-12 rounded-t-md bg-blue-600 transition-all"
+                  style={{ height: `${height}%` }}
+                />
+                <span className="text-xs text-foreground/50">{item.sem}</span>
+              </div>
+            );
+          })}
+          <div className="flex flex-1 flex-col items-center gap-2">
+            <span className="text-xs font-semibold text-foreground/40">—</span>
+            <div className="w-full max-w-12 rounded-t-md bg-foreground/10 h-0" />
+            <span className="text-xs text-foreground/50">Y3S1</span>
+          </div>
+        </div>
+      </div>
+
       {/* Filters */}
       <div className="mt-8 rounded-xl border border-foreground/10 p-5">
         <div className="grid gap-4 sm:grid-cols-2">
