@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Kyaw Min Thu",
   headline:
     "Final-year Financial Technology student at Republic Polytechnic, Singapore.",
-  bio: "I am a final-year Financial Technology student at Republic Polytechnic, Singapore. I enjoy applying AI and robotics to solve everyday problems. I value self-improvement, a growth mindset, and giving back through volunteering work in my community.",
+  bio: "A final-year Financial Technology student with experience in team-based web and app development seeks an internship position with a forward-thinking tech or fintech company. Equipped with strong programming, data management, and problem-solving skills, able to contribute in web development, data analysis, and user-focused application design.",
   journey: "",
   focus: "",
   approach: "",
