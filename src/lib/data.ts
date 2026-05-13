@@ -9,7 +9,7 @@ export const personalInfo = {
   personal: "",
   cta: "I am seeking university opportunities in Computer Science / AI. Let's connect.",
   currentlyLearning:
-    "Leading an FYP with Green Link Digital Bank, competing in RobotX Challenge 2026, and building AI strategy blueprints for the IMDA × Google challenge.",
+    "Leading an FYP with Green Link Digital Bank, competing in RobotX Challenge 2026, Whitehacks 2026 CTF, and building AI strategy blueprints for the IMDA × Google challenge.",
 };
 
 export interface Skill {
