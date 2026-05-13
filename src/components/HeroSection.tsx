@@ -11,7 +11,7 @@ export default function HeroSection() {
         <div className="flex justify-center md:order-2 md:justify-end">
           <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-foreground/10 shadow-xl sm:h-64 sm:w-64 md:h-80 md:w-80">
             <Image
-              src={assetPath("/profile.jpg")}
+              src={assetPath("/profile.jpg?v=2")}
               alt={`Photo of ${personalInfo.name}`}
               fill
               className="object-cover"
