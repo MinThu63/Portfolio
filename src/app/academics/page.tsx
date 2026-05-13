@@ -82,32 +82,83 @@ export default function AcademicsPage() {
 
       {/* GPA Trend Chart */}
       <div className="mt-8 rounded-xl border border-foreground/10 p-6">
-        <h2 className="text-lg font-semibold">GPA Trend</h2>
-        <div className="mt-6 flex items-end justify-between gap-2 h-48">
-          {[
-            { sem: "Y1S1", gpa: 2.89 },
-            { sem: "Y1S2", gpa: 3.47 },
-            { sem: "Y2S1", gpa: 3.96 },
-            { sem: "Y2S2", gpa: 3.41 },
-          ].map((item) => {
-            const height = ((item.gpa - 2.0) / 2.0) * 100;
-            return (
-              <div key={item.sem} className="flex flex-1 flex-col items-center gap-2">
-                <span className="text-xs font-semibold text-foreground/70">
-                  {item.gpa.toFixed(2)}
-                </span>
-                <div
-                  className="w-full max-w-12 rounded-t-md bg-blue-600 transition-all"
-                  style={{ height: `${height}%` }}
-                />
-                <span className="text-xs text-foreground/50">{item.sem}</span>
-              </div>
-            );
-          })}
-          <div className="flex flex-1 flex-col items-center gap-2">
-            <span className="text-xs font-semibold text-foreground/40">—</span>
-            <div className="w-full max-w-12 rounded-t-md bg-foreground/10 h-0" />
-            <span className="text-xs text-foreground/50">Y3S1</span>
+        <h2 className="text-lg font-semibold">Semester GPA</h2>
+        <p className="mt-1 text-xs text-foreground/50">GPA achieved per semester</p>
+        <div className="mt-6 relative h-48">
+          {/* Horizontal grid lines */}
+          {[2.0, 2.5, 3.0, 3.5, 4.0].map((val) => (
+            <div
+              key={val}
+              className="absolute left-8 right-0 border-t border-foreground/5"
+              style={{ bottom: `${((val - 2.0) / 2.0) * 100}%` }}
+            >
+              <span className="absolute -left-8 -top-2 text-[10px] text-foreground/40">
+                {val.toFixed(1)}
+              </span>
+            </div>
+          ))}
+          {/* Data points and line */}
+          <svg className="absolute inset-0 left-8 w-[calc(100%-2rem)] h-full" preserveAspectRatio="none">
+            {(() => {
+              const data = [2.89, 3.47, 3.96, 3.41];
+              const points = data.map((gpa, i) => ({
+                x: (i / (data.length - 1)) * 100,
+                y: 100 - ((gpa - 2.0) / 2.0) * 100,
+              }));
+              const pathD = points
+                .map((p, i) => `${i === 0 ? "M" : "L"} ${p.x}% ${p.y}%`)
+                .join(" ");
+              return (
+                <>
+                  <path
+                    d={pathD}
+                    fill="none"
+                    stroke="rgb(37, 99, 235)"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  {points.map((p, i) => (
+                    <circle
+                      key={i}
+                      cx={`${p.x}%`}
+                      cy={`${p.y}%`}
+                      r="5"
+                      fill="rgb(37, 99, 235)"
+                      stroke="white"
+                      strokeWidth="2"
+                    />
+                  ))}
+                </>
+              );
+            })()}
+          </svg>
+          {/* Labels */}
+          <div className="absolute bottom-0 left-8 right-0 translate-y-6 flex justify-between">
+            {["Y1S1", "Y1S2", "Y2S1", "Y2S2"].map((sem, i) => (
+              <span key={sem} className="text-xs text-foreground/50">{sem}</span>
+            ))}
+          </div>
+          {/* GPA values above points */}
+          <div className="absolute left-8 right-0 top-0 h-full pointer-events-none">
+            {[
+              { gpa: 2.89, i: 0 },
+              { gpa: 3.47, i: 1 },
+              { gpa: 3.96, i: 2 },
+              { gpa: 3.41, i: 3 },
+            ].map(({ gpa, i }) => (
+              <span
+                key={i}
+                className="absolute text-xs font-semibold text-blue-600 -translate-x-1/2 -translate-y-6"
+                style={{
+                  left: `${(i / 3) * 100}%`,
+                  bottom: `${((gpa - 2.0) / 2.0) * 100}%`,
+                }}
+              >
+                {gpa.toFixed(2)}
+              </span>
+            ))}
           </div>
         </div>
       </div>
