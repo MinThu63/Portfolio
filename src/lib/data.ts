@@ -235,7 +235,7 @@ export const academicAwards: AcademicAward[] = [
   {
     title: "Director's Roll of Honour",
     issuer: "Republic Polytechnic",
-    date: "AY2025 Semester 1",
+    date: "AY2024 Semester 2",
     description:
       "Awarded for outstanding academic performance, placing in the top percentile of the cohort for the semester.",
     image: "/certs/DROH 1.jpg",
@@ -243,7 +243,7 @@ export const academicAwards: AcademicAward[] = [
   {
     title: "Director's Roll of Honour",
     issuer: "Republic Polytechnic",
-    date: "AY2025 Semester 2",
+    date: "AY2025 Semester 1",
     description:
       "Awarded for outstanding academic performance, placing in the top percentile of the cohort for the semester.",
     image: "/certs/DROH 2.jpg",
