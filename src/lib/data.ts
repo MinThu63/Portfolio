@@ -367,8 +367,8 @@ export const projects: Project[] = [
   {
     title: "Automated Regulatory Monitoring and Compliance Management System",
     description:
-      "Final Year Project in partnership with GLDB (Green Link Digital Bank). Building an automated system that monitors regulatory changes and manages compliance workflows for a licensed digital bank. The system tracks regulatory updates, assesses impact, and streamlines compliance reporting.",
-    tags: ["Python", "NLP", "FastAPI", "React", "Compliance", "Fintech"],
+      "A full-stack compliance management platform designed for Green Link Digital Bank (GLDB), licensed by MAS. Automates monitoring of regulatory changes from 7 major international authorities (MAS, FATF, FinCEN, ECB, FCA, BIS, HKMA), detects and assesses regulatory updates with severity scoring, and provides compliance officers with a professional dashboard for task management, gap analysis, and audit-ready reporting.",
+    tags: ["Node.js", "Express.js", "MySQL", "Chart.js", "Bootstrap 5", "Web Scraping"],
     category: "AI & Machine Learning",
     partnerLink: { name: "GLDB", url: "https://www.glbank.com/" },
     label: "FYP",
@@ -377,11 +377,11 @@ export const projects: Project[] = [
     school: true,
     team: true,
     teamRole:
-      "Team Leader — leading the full-stack development of the regulatory monitoring pipeline, coordinating task allocation across team members, managing stakeholder communication with GLDB, and overseeing the integration of NLP-based document parsing with the compliance dashboard interface.",
+      "Team Leader — leading full-stack development, coordinating task allocation across team members, managing stakeholder communication with GLDB, and overseeing the integration of automated regulatory scraping with the compliance dashboard.",
     process:
-      "Currently in development. Working with GLDB stakeholders to understand regulatory requirements and compliance workflows. Building NLP pipelines to parse and classify regulatory documents, with a React dashboard for compliance officers to track and manage updates.",
+      "Working with GLDB stakeholders to understand MAS compliance requirements. Built automated scraping of 7 regulatory authorities using cheerio and node-cron for biweekly change detection. Designed a decoupled architecture with RESTful backend and responsive frontend featuring real-time alerts, task workflows, audit trails, and CSV export.",
     whatILearned:
-      "Gaining real-world experience working with an industry partner on a production-grade fintech system. Learning about regulatory technology (RegTech), NLP for document understanding, and how compliance processes work in a licensed digital bank.",
+      "Gaining real-world experience working with a MAS-licensed digital bank on a production-grade compliance system. Learning about RegTech, automated regulatory monitoring, impact assessment workflows, and how to build secure audit-ready systems with proper authentication and historical archiving.",
   },
   {
     title: "ScamGuard",
