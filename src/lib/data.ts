@@ -131,6 +131,26 @@ export interface InvolvementRecord {
 
 export const representationRecords: InvolvementRecord[] = [
   {
+    level: "RP Internal",
+    event: "SG Perspective Dialogue 2026 with SMS Zaqy Mohamad",
+    academicYear: "AY2026",
+  },
+  {
+    level: "RP Internal",
+    event: "Ground Deployment Exercise 2026 with SPF and SCDF - Briefing and Technical Rehearsal 1 - May 2026",
+    academicYear: "AY2026",
+  },
+  {
+    level: "RP Internal",
+    event: "iDARE Entrepreneurial Challenge 2026 submissions",
+    academicYear: "AY2026",
+  },
+  {
+    level: "RP Internal",
+    event: "SOI Webinar - Tips and Tricks for Successful Application To University - May 2026",
+    academicYear: "AY2026",
+  },
+  {
     level: "Community",
     event: "CY2026-179-Be Cyber Safe Workshop for Seniors @ Fernvale Community Club",
     academicYear: "AY2026",
