@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
 import { personalInfo } from "@/lib/data";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavItem {
   label: string;
@@ -39,7 +41,13 @@ const navItems: NavItem[] = [
   { label: "Contact", href: "#contact" },
 ];
 
-function DesktopDropdown({ item }: { item: NavItem }) {
+function resolveHref(href: string, isHome: boolean): string {
+  if (isHome) return href;
+  // On non-home pages, prefix hash links with "/" to navigate back to homepage sections
+  return href.startsWith("#") ? `/${href}` : href;
+}
+
+function DesktopDropdown({ item, isHome }: { item: NavItem; isHome: boolean }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -55,12 +63,12 @@ function DesktopDropdown({ item }: { item: NavItem }) {
 
   if (!item.children) {
     return (
-      <a
-        href={item.href}
+      <Link
+        href={resolveHref(item.href!, isHome)}
         className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
       >
         {item.label}
-      </a>
+      </Link>
     );
   }
 
@@ -79,14 +87,14 @@ function DesktopDropdown({ item }: { item: NavItem }) {
       {open && (
         <div className="absolute left-0 top-full mt-2 min-w-[180px] rounded-lg border border-foreground/10 bg-background p-1.5 shadow-lg">
           {item.children.map((child) => (
-            <a
+            <Link
               key={child.href}
-              href={child.href}
+              href={resolveHref(child.href, isHome)}
               onClick={() => setOpen(false)}
               className="block rounded-md px-3 py-2 text-sm text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-foreground"
             >
               {child.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
@@ -98,6 +106,8 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
 
   useEffect(() => setMounted(true), []);
 
@@ -108,15 +118,15 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-foreground/10 bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a href="#" className="text-lg font-bold tracking-tight">
+        <Link href="/" className="text-lg font-bold tracking-tight">
           {personalInfo.name}
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <li key={item.label}>
-              <DesktopDropdown item={item} />
+              <DesktopDropdown item={item} isHome={isHome} />
             </li>
           ))}
           <li>
@@ -163,27 +173,27 @@ export default function Navigation() {
           {navItems.map((item) => (
             <div key={item.label}>
               {item.href ? (
-                <a
-                  href={item.href}
+                <Link
+                  href={resolveHref(item.href, isHome)}
                   onClick={() => setMobileOpen(false)}
                   className="block py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
                 >
                   {item.label}
-                </a>
+                </Link>
               ) : (
                 <>
                   <p className="pb-1 pt-3 text-xs font-semibold uppercase tracking-wider text-foreground/40">
                     {item.label}
                   </p>
                   {item.children?.map((child) => (
-                    <a
+                    <Link
                       key={child.href}
-                      href={child.href}
+                      href={resolveHref(child.href, isHome)}
                       onClick={() => setMobileOpen(false)}
                       className="block py-2 pl-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
                     >
                       {child.label}
-                    </a>
+                    </Link>
                   ))}
                 </>
               )}

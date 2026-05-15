@@ -664,6 +664,19 @@ export interface Competition {
 
 export const competitions: Competition[] = [
   {
+    title: "iDARE Entrepreneurial Challenge 2026",
+    organiser: "Republic Polytechnic",
+    status: "Completed",
+    timeline: "AY2026",
+    description:
+      "An entrepreneurial challenge encouraging students to ideate, develop, and pitch innovative solutions to real-world problems. Submitted a proposal demonstrating entrepreneurial thinking and practical application of technology.",
+    highlights: [
+      "Developed and submitted an entrepreneurial proposal",
+      "Applied design thinking to a real-world problem",
+      "Strengthened pitching and presentation skills",
+    ],
+  },
+  {
     title: "RobotX Challenge 2026",
     organiser: "Republic of Singapore Navy (RSN) & Future Systems and Technology Directorate (FSTD)",
     status: "In Progress",
