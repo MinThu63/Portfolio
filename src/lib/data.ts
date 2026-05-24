@@ -131,6 +131,17 @@ export interface InvolvementRecord {
 
 export const representationRecords: InvolvementRecord[] = [
   {
+    level: "Community",
+    event: "CY2026-195- Proposal for Trekking With A Purpose - Reservoir Quest Edition",
+    academicYear: "AY2026",
+    volunteer: true,
+  },
+  {
+    level: "RP Internal",
+    event: "Responders Plus Programme by SCDF - May 2026",
+    academicYear: "AY2026",
+  },
+  {
     level: "RP Internal",
     event: "SG Perspective Dialogue 2026 with SMS Zaqy Mohamad",
     academicYear: "AY2026",
