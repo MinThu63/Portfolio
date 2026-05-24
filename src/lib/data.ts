@@ -283,6 +283,17 @@ export const academicAwards: AcademicAward[] = [
 
 export const certifications: Certification[] = [
   {
+    title: "Responders Plus Programme (In-Person)",
+    issuer: "Singapore Civil Defence Force (SCDF)",
+    date: "May 2026",
+    image: "/certs/SCDF Responders Plus.jpg",
+    skillsAcquired: [
+      "First Aid",
+      "CPR-AED",
+      "Fire Safety",
+    ],
+  },
+  {
     title: "Google AI Professional Certificate",
     issuer: "Google (via Coursera)",
     date: "April 2026",
