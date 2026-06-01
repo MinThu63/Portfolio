@@ -9,7 +9,7 @@ export const personalInfo = {
   personal: "",
   cta: "Open to internship opportunities in AI, software development, or fintech. Let's connect.",
   currentlyLearning:
-    "Leading my FYP team with Green Link Digital Bank, competing in RobotX Challenge 2026 and Whitehacks 2026 CTF, and building AI strategy blueprints for the IMDA × Google challenge.",
+    "Leading my FYP team with Green Link Digital Bank, competing in RobotX Challenge 2026, Whitehacks 2026 CTF, and PolyFinTech100 Hackathon 2026, and building AI strategy blueprints for the IMDA × Google challenge.",
 };
 
 export interface Skill {
