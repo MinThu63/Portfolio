@@ -595,6 +595,19 @@ export const projects: Project[] = [
     whatILearned:
       "Understood smart contract design patterns (escrow, token standards). Learned Solidity security best practices (reentrancy guards, access control). Gained experience with the full DApp development lifecycle from contract deployment to frontend integration.",
   },
+  {
+    title: "Eco-Helper: Sustainability Concierge",
+    description:
+      "A Telegram chatbot powered by local AI (Ollama + LLaVA) that analyzes photos of products and packaging to provide recycling guidance, carbon footprint estimates, and greener alternatives. Features weekly eco-streak tracking and a community leaderboard to encourage sustainable habits. Runs entirely locally for full privacy — no data leaves the user's machine.",
+    tags: ["Python", "Ollama", "LLaVA", "Telegram Bot", "SQLite", "SQLAlchemy", "APScheduler"],
+    category: "AI & Machine Learning",
+    link: "https://github.com/MinThu63/Eco-Helper",
+    featured: true,
+    process:
+      "Started from the motivation that most people want to recycle correctly but don't know how when holding a random product. Built the architecture around Ollama's LLaVA vision model for multimodal image analysis. Designed a carefully crafted prompt that enforces flat JSON output for reliable parsing. Added gamification (streaks and leaderboard) to encourage consistent usage, and APScheduler cron jobs for automated weekly community summaries.",
+    whatILearned:
+      "Gained hands-on experience with multimodal AI — processing both images and text prompts simultaneously through a local vision model. Learned structured output parsing from LLM responses with fallback handling for nested structures. Understood the trade-offs of running AI fully locally (privacy vs. compute requirements). Also deepened my skills in async Python architecture, prompt engineering for reliable JSON output, and gamification design for habit formation.",
+  },
 ];
 
 // Downloadable documents
