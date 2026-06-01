@@ -712,6 +712,20 @@ export const competitions: Competition[] = [
     ],
   },
   {
+    title: "PolyFinTech100 Hackathon 2026",
+    organiser: "PolyFinTech100 (Industry sponsors: OCBC, Prudential, CGS International, NETS, Singapore College of Insurance)",
+    status: "In Progress",
+    timeline: "2026 (Registration deadline: 29 May 2026)",
+    description:
+      "A national-level fintech hackathon for polytechnic students, tackling real-world problem statements from leading financial institutions. Categories include ESG Intelligence, Intelligent Banking, Insurance Navigator, Pay-Tech, and Customer Experience/UX. Representing Republic Polytechnic on a national stage.",
+    highlights: [
+      "Competing against polytechnic teams nationwide on industry-sponsored challenges",
+      "Problem statements from OCBC, Prudential, CGS International, NETS, and Singapore College of Insurance",
+      "Networking with fintech industry experts and potential mentors",
+      "Applying fintech skills to real-world banking, insurance, and payments challenges",
+    ],
+  },
+  {
     title: "RobotX Challenge 2026",
     organiser: "Republic of Singapore Navy (RSN) & Future Systems and Technology Directorate (FSTD)",
     status: "In Progress",
