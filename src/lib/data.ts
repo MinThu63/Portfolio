@@ -9,7 +9,7 @@ export const personalInfo = {
   personal: "",
   cta: "Open to internship opportunities in AI, software development, or fintech. Let's connect.",
   currentlyLearning:
-    "Leading my FYP team with Green Link Digital Bank, competing in RobotX Challenge 2026, Whitehacks 2026 CTF, and PolyFinTech100 Hackathon 2026, and building AI strategy blueprints for the IMDA × Google challenge.",
+    "Leading my FYP team with Green Link Digital Bank, competing in RobotX Challenge 2026, Whitehacks 2026 CTF, PolyFinTech100 Hackathon 2026, and Microsoft Agents League Hackathon, and building AI strategy blueprints for the IMDA × Google challenge.",
 };
 
 export interface Skill {
@@ -723,6 +723,20 @@ export const competitions: Competition[] = [
       "Problem statements from OCBC, Prudential, CGS International, NETS, and Singapore College of Insurance",
       "Networking with fintech industry experts and potential mentors",
       "Applying fintech skills to real-world banking, insurance, and payments challenges",
+    ],
+  },
+  {
+    title: "Agents League Hackathon @ AISF 2026",
+    organiser: "Microsoft",
+    status: "In Progress",
+    timeline: "June 4–14, 2026",
+    description:
+      "A 10-day global AI developer competition combining live coding battles on Microsoft Reactor, asynchronous challenges, and community engagement. Build innovative AI agents across Creative Apps, Reasoning Agents, or Enterprise Agents tracks — all projects must integrate with at least one Microsoft IQ intelligence layer (Foundry IQ, Work IQ, or Fabric IQ).",
+    highlights: [
+      "Building AI agents using Microsoft IQ intelligence layers",
+      "Competing globally with developers of all skill levels",
+      "Projects judged on accuracy, reasoning, creativity, UX, and reliability by Microsoft product teams",
+      "Using AI-assisted development with GitHub Copilot",
     ],
   },
   {
