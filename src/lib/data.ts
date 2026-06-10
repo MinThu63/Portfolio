@@ -699,6 +699,20 @@ export interface Competition {
 
 export const competitions: Competition[] = [
   {
+    title: "Skills Ignition SG AI Challenge 2026 — 2-Week Strategy Sprint",
+    organiser: "IMDA & Google (via Love Frankie)",
+    status: "Completed",
+    timeline: "May 2026 (Submission: 22 May 2026)",
+    description:
+      "After completing the AI training phase, competed in the 2-Week Challenge — building a 5-slide AI Strategy Blueprint for an assigned real-world business problem. Top 50 participants advance to a mentorship phase with industry leaders in June.",
+    highlights: [
+      "Applied AI fluency to a real business problem statement",
+      "Designed an end-to-end AI workflow using Google Gemini and NotebookLM",
+      "Competed for Top 50 selection and cash prizes up to $5,000",
+      "Evaluated on Problem, Solution, Output, Governance, and Adoption",
+    ],
+  },
+  {
     title: "iDARE Entrepreneurial Challenge 2026",
     organiser: "Republic Polytechnic",
     status: "Completed",
@@ -753,20 +767,7 @@ export const competitions: Competition[] = [
       "Competing against polytechnics, ITEs, JCs, and secondary schools",
     ],
   },
-  {
-    title: "Skills Ignition SG AI Challenge 2026 — 2-Week Strategy Sprint",
-    organiser: "IMDA & Google (via Love Frankie)",
-    status: "In Progress",
-    timeline: "May 2026 (Submission: 22 May 2026)",
-    description:
-      "After completing the AI training phase, now competing in the 2-Week Challenge — building a 5-slide AI Strategy Blueprint for an assigned real-world business problem. Top 50 participants advance to a mentorship phase with industry leaders in June.",
-    highlights: [
-      "Applying AI fluency to a real business problem statement",
-      "Designing an end-to-end AI workflow using Google Gemini and NotebookLM",
-      "Competing for Top 50 selection and cash prizes up to $5,000",
-      "Evaluated on Problem, Solution, Output, Governance, and Adoption",
-    ],
-  },
+
   {
     title: "Whitehacks 2026 — Capture The Flag (CTF)",
     organiser: "SMU Whitehat Society",
