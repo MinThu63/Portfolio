@@ -443,21 +443,39 @@ export const projects: Project[] = [
   {
     title: "Automated Regulatory Monitoring and Compliance Management System",
     description:
-      "A full-stack compliance management platform designed for Green Link Digital Bank (GLDB), licensed by MAS. Automates monitoring of regulatory changes from 7 major international authorities (MAS, FATF, FinCEN, ECB, FCA, BIS, HKMA), detects and assesses regulatory updates with severity scoring, and provides compliance officers with a professional dashboard for task management, gap analysis, and audit-ready reporting.",
-    tags: ["Node.js", "Express.js", "MySQL", "Chart.js", "Bootstrap 5", "Web Scraping"],
+      "A full-stack compliance management platform for Green Link Digital Bank (GLDB), a MAS-licensed Digital Wholesale Bank serving 369,500+ Singapore MSMEs. Deploys 7 autonomous AI agents that scrape, assess, analyze, and act on regulatory changes from 5 international authorities (MAS, FATF, FinCEN, ECB, FCA) without human intervention. Features RAG-powered 3-step impact assessment, cluster-based gap analysis against 13 internal policies, auto-task generation, AI policy advisory, side-by-side diff view, email digest, and PII filtering for PDPA compliance.",
+    tags: ["Node.js", "Express.js", "MySQL", "OpenAI GPT-4o-mini", "Pinecone", "RAG", "node-cron", "Bootstrap 5", "Chart.js"],
     category: "AI & Machine Learning",
     partnerLink: { name: "GLDB", url: "https://www.glbank.com/" },
+    link: "https://github.com/MinThu63/Automated-Regulatory-and-Compliance-Management-System-V2",
+    demo: "https://automated-regulatory-and-compliance-bj0l.onrender.com",
     label: "FYP",
     featured: true,
-    inProgress: true,
     school: true,
     team: true,
     teamRole:
-      "Team Leader — leading full-stack development, coordinating task allocation across team members, managing stakeholder communication with GLDB, and overseeing the integration of automated regulatory scraping with the compliance dashboard.",
+      "Team Leader — led full-stack development, coordinated task allocation across team members, managed stakeholder communication with GLDB, and oversaw the integration of 7 autonomous AI agents with the compliance dashboard.",
     process:
-      "Working with GLDB stakeholders to understand MAS compliance requirements. Built automated scraping of 7 regulatory authorities using cheerio and node-cron for biweekly change detection. Designed a decoupled architecture with RESTful backend and responsive frontend featuring real-time alerts, task workflows, audit trails, and CSV export.",
+      "Worked with GLDB stakeholders to understand MAS compliance requirements. Built 7 autonomous agents (Scraper, Assessor, Analyzer, Dispatcher, Advisor, Versioner, Notifier) communicating via an EventBus publish/subscribe architecture. Implemented a RAG pipeline (Pinecone + OpenAI embeddings) for semantic search across regulations and policies. Designed content-based change detection with LLM-powered structured diffs, a 3-step impact assessment pipeline (Classify → Assess → Verify), and cluster gap analysis against all 13 internal policies. Deployed on Azure App Service + Render.",
     whatILearned:
-      "Gaining real-world experience working with a MAS-licensed digital bank on a production-grade compliance system. Learning about RegTech, automated regulatory monitoring, impact assessment workflows, and how to build secure audit-ready systems with proper authentication and historical archiving.",
+      "Gained real-world experience working with a MAS-licensed digital bank on a production-grade compliance system. Learned to architect multi-agent systems with event-driven communication, build RAG pipelines with vector databases, implement PII filtering for regulatory compliance (PDPA), and design audit-ready systems with full LLM call tracing. Understood RegTech domain deeply — impact assessment workflows, policy versioning, and automated remediation task generation.",
+  },
+  {
+    title: "TrustBuddy — Anti-Scam Assistant",
+    description:
+      "An AI-powered anti-scam assistant designed to protect senior citizens in Singapore. Seniors paste any suspicious message and receive an instant RAG-powered verdict (SCAM ALERT, SUSPICIOUS, or LIKELY SAFE) with plain-language explanation. Uses Pinecone vector search over 44+ verified scam profiles from ScamShield, SPF, and major banks. Features multi-language UI (EN, 中文, Melayu, தமிழ்), text-to-speech, WhatsApp sharing, confidence scoring, and monthly AI-generated scam trend reports.",
+    tags: ["n8n", "Pinecone", "RAG", "OpenAI", "Bootstrap 5", "GitHub Pages", "Google Sheets"],
+    category: "AI & Machine Learning",
+    link: "https://github.com/MinThu63/TrustBuddy",
+    demo: "https://minthu63.github.io/TrustBuddy/",
+    featured: true,
+    team: true,
+    teamRole:
+      "Team Leader — built the main n8n workflow (ingestion + detection), set up Pinecone RAG pipeline, implemented frontend-backend webhook integration, Monthly Report workflow, Code node for entity extraction and Google Sheets logging, coordinated the team, and managed project documentation and submission.",
+    process:
+      "Built for the Skills Ignition SG AI Challenge 2026. Designed a no-code/low-code AI architecture using n8n workflows — one for knowledge base ingestion (Form → Embeddings → Pinecone), one for scam detection (Webhook → AI Agent + Pinecone tool → Response + Google Sheets logging), and a third for monthly trend reporting. Iterated the system prompt 3 times to achieve senior-friendly responses with 150-word limits and confidence scoring. Frontend built accessibility-first with 60px+ buttons, 20px base font, ARIA labels, and high contrast.",
+    whatILearned:
+      "Learned to build production AI workflows without traditional backend code using n8n orchestration. Gained experience with RAG pipeline design (chunking, embedding, retrieval, augmentation, generation), prompt engineering for constrained outputs, and accessibility-first design for elderly users. Understood how to structure team deliverables under competition deadlines and coordinate 5 members with clear ownership boundaries.",
   },
   {
     title: "ScamGuard",
