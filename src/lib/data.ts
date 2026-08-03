@@ -508,7 +508,6 @@ export const projects: Project[] = [
     tags: ["React", "FastAPI", "DBSCAN", "Z-score", "Data Visualization"],
     category: "AI & Machine Learning",
     link: "https://github.com/MinThu63/Transaction-Analysis-Fraud-Detection",
-    featured: true,
     process:
       "Research phase involved studying forensic accounting techniques (Benford's Law) and statistical anomaly detection methods. Built the backend first with FastAPI, testing each detection algorithm independently before combining them into a composite risk score. The network graph visualization went through 3 iterations before achieving readable layouts for large datasets.",
     whatILearned:
@@ -609,7 +608,6 @@ export const projects: Project[] = [
     link: "https://github.com/Dangchoithuoc/C372-FA-Bookstore",
     team: true,
     school: true,
-    featured: true,
     teamRole:
       "Led the payment integration module — implemented Stripe, PayPal, and NETS payment gateways with webhook handling, refund logic, and transaction logging. Also designed the database schema for orders and payment records, and coordinated API contracts with teammates building the frontend cart and admin dashboard.",
     process:
@@ -641,7 +639,6 @@ export const projects: Project[] = [
     link: "https://github.com/MinThu63/metashop-dapp",
     team: true,
     school: true,
-    featured: true,
     process:
       "Designed the smart contract architecture first — escrow contract for payments, ERC20 for loyalty tokens. Tested extensively on Ganache before integrating with the Express frontend. The escrow release mechanism went through 3 iterations to handle dispute scenarios.",
     whatILearned:
@@ -654,7 +651,6 @@ export const projects: Project[] = [
     tags: ["Python", "Ollama", "LLaVA", "Telegram Bot", "SQLite", "SQLAlchemy", "APScheduler"],
     category: "AI & Machine Learning",
     link: "https://github.com/MinThu63/Eco-Helper",
-    featured: true,
     process:
       "Started from the motivation that most people want to recycle correctly but don't know how when holding a random product. Built the architecture around Ollama's LLaVA vision model for multimodal image analysis. Designed a carefully crafted prompt that enforces flat JSON output for reliable parsing. Added gamification (streaks and leaderboard) to encourage consistent usage, and APScheduler cron jobs for automated weekly community summaries.",
     whatILearned:
