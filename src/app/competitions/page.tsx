@@ -1,18 +1,55 @@
+"use client";
+
+import { useState } from "react";
 import { competitions } from "@/lib/data";
-import { Trophy, CheckCircle, Clock, CircleCheck, ArrowRight } from "lucide-react";
+import { ArrowLeft, Trophy, CheckCircle, Clock, CircleCheck } from "lucide-react";
 import Link from "next/link";
 
-export default function CompetitionsSection() {
-  const featured = competitions.filter((c) => c.featured);
+const filters = ["All", "In Progress", "Completed"] as const;
+type Filter = (typeof filters)[number];
+
+export default function CompetitionsPage() {
+  const [activeFilter, setActiveFilter] = useState<Filter>("All");
+
+  const filtered =
+    activeFilter === "All"
+      ? competitions
+      : competitions.filter((c) => c.status === activeFilter);
 
   return (
-    <section id="competitions" className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
-      <h2 className="text-3xl font-bold tracking-tight">Competitions</h2>
+    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <Link
+        href="/"
+        className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+      >
+        <ArrowLeft size={16} />
+        Back to Home
+      </Link>
+
+      <h1 className="mt-8 text-3xl font-bold tracking-tight">All Competitions</h1>
       <p className="mt-2 text-foreground/60">
-        Challenges I&apos;ve competed in and completed.
+        A complete list of competitions I&apos;ve participated in.
       </p>
+
+      {/* Filter tabs */}
+      <div className="mt-6 flex flex-wrap gap-2">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              activeFilter === filter
+                ? "bg-foreground text-background"
+                : "border border-foreground/20 text-foreground/70 hover:bg-foreground/5"
+            }`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
       <div className="mt-8 space-y-6">
-        {featured.map((comp) => (
+        {filtered.map((comp) => (
           <div
             key={comp.title}
             className="rounded-xl border border-foreground/10 p-6 transition-colors hover:bg-foreground/5"
@@ -56,16 +93,13 @@ export default function CompetitionsSection() {
             </ul>
           </div>
         ))}
+
+        {filtered.length === 0 && (
+          <p className="text-center text-foreground/50">
+            No competitions in this category yet.
+          </p>
+        )}
       </div>
-      <div className="mt-8 text-center">
-        <Link
-          href="/competitions"
-          className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-foreground/5"
-        >
-          View All Competitions
-          <ArrowRight size={16} />
-        </Link>
-      </div>
-    </section>
+    </div>
   );
 }

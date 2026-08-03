@@ -743,6 +743,7 @@ export interface Competition {
   timeline: string;
   description: string;
   highlights: string[];
+  featured?: boolean;
 }
 
 export const competitions: Competition[] = [
@@ -759,6 +760,7 @@ export const competitions: Competition[] = [
       "Competed for Top 50 selection and cash prizes up to $5,000",
       "Evaluated on Problem, Solution, Output, Governance, and Adoption",
     ],
+    featured: true,
   },
   {
     title: "iDARE Entrepreneurial Challenge 2026",
@@ -772,6 +774,7 @@ export const competitions: Competition[] = [
       "Applied design thinking to a real-world problem",
       "Strengthened pitching and presentation skills",
     ],
+    featured: true,
   },
 
   {
