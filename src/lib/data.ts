@@ -283,6 +283,40 @@ export const academicAwards: AcademicAward[] = [
 
 export const certifications: Certification[] = [
   {
+    title: "Skills Ignition SG AI Challenge 2026 — Completion",
+    issuer: "IMDA & Google (via Love Frankie)",
+    date: "May 2026",
+    image: "/certs/SGAI Image.jpg",
+    skillsAcquired: [
+      "AI Strategy Blueprint development",
+      "End-to-end AI workflow design using Google Gemini and NotebookLM",
+      "Problem framing, solution design, governance, and adoption planning",
+    ],
+  },
+  {
+    title: "Whitehacks 2026 — Capture The Flag (CTF)",
+    issuer: "SMU Whitehat Society",
+    date: "2026",
+    image: "/certs/whitehacks image.jpg",
+    skillsAcquired: [
+      "Cryptography",
+      "Reverse Engineering",
+      "Web Exploitation",
+      "Forensics",
+    ],
+  },
+  {
+    title: "Unmanned Aircraft Basic Training (UABT)",
+    issuer: "Republic Polytechnic",
+    date: "2026",
+    image: "/certs/UABT image.jpg",
+    skillsAcquired: [
+      "Unmanned aircraft operation fundamentals",
+      "Flight safety and regulations",
+      "Basic drone piloting proficiency",
+    ],
+  },
+  {
     title: "Responders Plus Programme (In-Person)",
     issuer: "Singapore Civil Defence Force (SCDF)",
     date: "May 2026",
