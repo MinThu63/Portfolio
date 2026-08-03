@@ -725,24 +725,11 @@ export const competitions: Competition[] = [
       "Strengthened pitching and presentation skills",
     ],
   },
-  {
-    title: "PolyFinTech100 Hackathon 2026",
-    organiser: "PolyFinTech100 (Industry sponsors: OCBC, Prudential, CGS International, NETS, Singapore College of Insurance)",
-    status: "In Progress",
-    timeline: "2026 (Registration deadline: 29 May 2026)",
-    description:
-      "A national-level fintech hackathon for polytechnic students, tackling real-world problem statements from leading financial institutions. Categories include ESG Intelligence, Intelligent Banking, Insurance Navigator, Pay-Tech, and Customer Experience/UX. Representing Republic Polytechnic on a national stage.",
-    highlights: [
-      "Competing against polytechnic teams nationwide on industry-sponsored challenges",
-      "Problem statements from OCBC, Prudential, CGS International, NETS, and Singapore College of Insurance",
-      "Networking with fintech industry experts and potential mentors",
-      "Applying fintech skills to real-world banking, insurance, and payments challenges",
-    ],
-  },
+
   {
     title: "Agents League Hackathon @ AISF 2026",
     organiser: "Microsoft",
-    status: "In Progress",
+    status: "Completed",
     timeline: "June 4–14, 2026",
     description:
       "A 10-day global AI developer competition combining live coding battles on Microsoft Reactor, asynchronous challenges, and community engagement. Build innovative AI agents across Creative Apps, Reasoning Agents, or Enterprise Agents tracks — all projects must integrate with at least one Microsoft IQ intelligence layer (Foundry IQ, Work IQ, or Fabric IQ).",
@@ -753,25 +740,12 @@ export const competitions: Competition[] = [
       "Using AI-assisted development with GitHub Copilot",
     ],
   },
-  {
-    title: "RobotX Challenge 2026",
-    organiser: "Republic of Singapore Navy (RSN) & Future Systems and Technology Directorate (FSTD)",
-    status: "In Progress",
-    timeline: "2026 (Grand Finale: November 2026)",
-    description:
-      "A premier robotics competition where teams of 3–4 design and deploy autonomous systems on open water. Each team receives a baseline modular robotics kit including an Unmanned Surface Vessel (USV) and an Underwater Remotely Operated Vehicle (ROV).",
-    highlights: [
-      "Designing autonomous navigation systems for maritime environments",
-      "Assembling and programming USV and ROV kits",
-      "Networking with engineers from RSN and FSTD",
-      "Competing against polytechnics, ITEs, JCs, and secondary schools",
-    ],
-  },
+
 
   {
     title: "Whitehacks 2026 — Capture The Flag (CTF)",
     organiser: "SMU Whitehat Society",
-    status: "In Progress",
+    status: "Completed",
     timeline: "2026 (Sign-up by 15 June 2026)",
     description:
       "A beginner-friendly CTF competition by Singapore Management University designed for tertiary students to explore cybersecurity. Challenges include Cryptography, Reverse Engineering, Web exploitation, and Forensics — with in-house training workshops provided ahead of the competition.",
