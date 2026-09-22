@@ -103,9 +103,10 @@ export default function AcademicsPage() {
                 { sem: "Y1S2", gpa: 3.47 },
                 { sem: "Y2S1", gpa: 3.96 },
                 { sem: "Y2S2", gpa: 3.41 },
+                { sem: "Y3S1", gpa: 4.0 },
               ];
               const points = data.map((d, i) => ({
-                x: 80 + i * 100,
+                x: 70 + i * 75,
                 y: 180 - ((d.gpa - 2.0) / 2.0) * 160,
               }));
               const linePath = points.map((p, i) => `${i === 0 ? "M" : "L"}${p.x},${p.y}`).join(" ");

@@ -725,15 +725,15 @@ export const academicRecords: ModuleRecord[] = [
   { academicYear: "2025", semester: 2, code: "C372", name: "Payment Technologies", credits: 4, grade: "B" },
   { academicYear: "2025", semester: 2, code: "C373", name: "Distributed Ledger Technology Solutioning", credits: 4, grade: "B+" },
   { academicYear: "2025", semester: 2, code: "G962", name: "ECG II: Becoming Future-Ready", credits: 1, grade: "Pass" },
-  // Current semester — In Progress
-  { academicYear: "2026", semester: 1, code: "C303", name: "IT Project Management", credits: 4, grade: "In Progress" },
-  { academicYear: "2026", semester: 1, code: "C204", name: "AI Essentials & Innovations", credits: 4, grade: "In Progress" },
-  { academicYear: "2026", semester: 1, code: "E001", name: "Discovering Robotics", credits: 2, grade: "In Progress" },
-  { academicYear: "2026", semester: 1, code: "E004", name: "Unmanned Aircraft Operation", credits: 2, grade: "In Progress" },
-  { academicYear: "2026", semester: 1, code: "C300", name: "Final Year Project (GLDB)", credits: 4, grade: "In Progress" },
+  // Year 3 Semester 1
+  { academicYear: "2026", semester: 1, code: "C303", name: "IT Project Management", credits: 4, grade: "A" },
+  { academicYear: "2026", semester: 1, code: "C204", name: "AI Essentials & Innovations", credits: 4, grade: "A" },
+  { academicYear: "2026", semester: 1, code: "E001", name: "Discovering Robotics", credits: 2, grade: "Pass" },
+  { academicYear: "2026", semester: 1, code: "E004", name: "Unmanned Aircraft Operation", credits: 2, grade: "Pass" },
+  { academicYear: "2026", semester: 1, code: "C300", name: "Final Year Project (GLDB)", credits: 4, grade: "DIST" },
 ];
 
-export const cGPA = 3.43;
+export const cGPA = 3.51;
 
 // Competitions
 export interface Competition {
